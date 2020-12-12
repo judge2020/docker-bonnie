@@ -1,27 +1,21 @@
 # Bonnie++ in a Docker (Alpine)
 
-[![CircleCI Build Status](https://img.shields.io/circleci/project/pozgo/docker-bonnie/master.svg)](https://circleci.com/gh/pozgo/docker-bonnie)  
-[![GitHub Open Issues](https://img.shields.io/github/issues/pozgo/docker-bonnie.svg)](https://github.com/pozgo/docker-bonnie/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/pozgo/docker-bonnie.svg)](https://github.com/pozgo/docker-bonnie)
-[![GitHub Forks](https://img.shields.io/github/forks/pozgo/docker-bonnie.svg)](https://github.com/pozgo/docker-bonnie)  
-[![Stars on Docker Hub](https://img.shields.io/docker/stars/polinux/bonnie.svg)](https://hub.docker.com/r/polinux/bonnie)
-[![Pulls on Docker Hub](https://img.shields.io/docker/pulls/polinux/bonnie.svg)](https://hub.docker.com/r/polinux/bonnie)  
-[![](https://images.microbadger.com/badges/version/polinux/bonnie.svg)](http://microbadger.com/images/polinux/bonnie)
-[![](https://images.microbadger.com/badges/license/polinux/bonnie.svg)](http://microbadger.com/images/polinux/bonnie)  
-[![](https://images.microbadger.com/badges/image/polinux/bonnie.svg)](http://microbadger.com/images/polinux/bonnie)
+Image: `ghcr.io/judge2020/docker-bonnie`
 
-[Docker Image]() with Bonnie++ benchamrk tool. This image is acting like `bonnie++` command and passes all arguments.
+
+[Docker Image](ghcr.io/judge2020/docker-bonnie) with Bonnie++ benchamrk tool. This image is acting like `bonnie++` command and passes all arguments.
 
 ### Build
 
-    docker build -t polinux/bonnie .
+    docker build -t bonnie .
 
 ### Basic Usage
 
     docker run \
-      -ti \
+      -it \
       --rm \
-      polinux/bonnie bonnie++ \
+      ghcr.io/judge2020/docker-bonnie \
+        bonnie++ \
         -d /tmp \
         -m TEST \
         -n 0 \
@@ -49,7 +43,7 @@ example data: `TEST,256M,,,134335,13,162332,9,,,+++++,+++,1306.7,2,,,,,,,,,,,,,`
       -ti \
       --rm \
       -v ${PWD}:/workdir \
-      polinux/bonnie \
+      ghcr.io/judge2020/docker-bonnie \
         bash -c 'echo "[RESULT]" | bon_csv2html > /workdir/out.html'
 
 Use file `out.html` and open it with any web-browser to see human readable output.
@@ -59,4 +53,7 @@ Example output
 ![Table](https://raw.githubusercontent.com/pozgo/docker-bonnie/master/images/table.jpg)
 
 ## Author
+
 Przemyslaw Ozgo (<linux@ozgo.info>)
+
+Updated by Hunter Ray for v2 and pushed to GitHub Container Registry (https://ghcr.io)

@@ -1,7 +1,7 @@
-FROM alpine:3.7
+FROM alpine:3
 # Bonnie++ Version can be found on offcial website of bonnie++
-# http://www.coker.com.au/bonnie++/
-ENV BONNIE_VERSION=1.97.3 \
+# https://doc.coker.com.au/projects/bonnie/
+ENV BONNIE_VERSION=2.00a \
     SHELL=/bin/bash
 
 RUN \
@@ -12,4 +12,4 @@ RUN \
   rm /tmp/bonnie++-${BONNIE_VERSION}.tgz && \
   rm -r /tmp/bonnie++-${BONNIE_VERSION}/
 
-CMD ['/usr/local/sbin/bonnie++']
+CMD ["/usr/local/sbin/bonnie++"]
