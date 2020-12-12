@@ -1,6 +1,9 @@
 name: docker
 on:
   push:
+    paths:
+      - 'Dockerfile'
+      - '.github/workflows/docker.yml'
 
 jobs:
   push_to_registry:

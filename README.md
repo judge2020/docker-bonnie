@@ -3,7 +3,7 @@
 Image: `ghcr.io/judge2020/docker-bonnie`
 
 
-[Docker Image](ghcr.io/judge2020/docker-bonnie) with Bonnie++ benchamrk tool. This image is acting like `bonnie++` command and passes all arguments.
+[Docker Image](https://ghcr.io/judge2020/docker-bonnie) with Bonnie++ benchamrk tool. This image is acting like `bonnie++` command and passes all arguments.
 
 ### Build
 
